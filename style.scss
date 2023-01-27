@@ -39,11 +39,15 @@ $bp : (
 }
 
 .box-1 {
-  grid-column: 1 / 5;
+  grid-column: 1 / 4;
 }
 
 .box-2 {
-  grid-column: 5 / 13;
+  grid-column: 4 / 12;
+}
+
+.box-3 {
+  grid-column: 12 / 13;
 }
 
 @include query(mobile) {
@@ -52,7 +56,8 @@ $bp : (
   }
 
   .box-1,
-  .box-2 {
+  .box-2,
+  .box-3 {
     grid-column: inherit;
   }
 }
