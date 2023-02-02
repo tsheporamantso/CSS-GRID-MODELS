@@ -2,8 +2,7 @@
 
 /**
 *! SCSS variables and each loop
-**/
-
+**/ 
 $bp : (
   mobile : 480px ,
   tablet : 786px,
@@ -20,11 +19,11 @@ $bp : (
 
 /**
 *! Defualt body style inputs.
-**/
+**/ 
 
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 
   body {
@@ -39,6 +38,7 @@ $bp : (
   a {
     text-decoration: none;
   }
+
 }
 
 [class^="box-"] {
@@ -49,7 +49,7 @@ $bp : (
 
 /**
 *! Container inputs.
-**/
+**/ 
 
 .container {
   height: 100vh;
