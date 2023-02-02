@@ -1,0 +1,86 @@
+/**
+*! SCSS Variables
+**/
+$bp : (
+  mobile : 480px,
+  tablet : 786px,
+  desktop : 1440px,
+);
+
+/**
+*! SCSS Media Query Render
+**/
+
+@mixin query($screen) {
+  @each $key, $value in $bp {
+    @if ($screen == $key) {
+      @media (max-width: $value) { @content; }
+    }
+  }
+}
+
+/**
+*! HTML or Body default style
+**/
+
+* {
+  margin: 5px 5px;
+  padding: 0;
+  box-sizing: border-box;
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+  }
+}
+
+/**
+*! Nested parent and children Grid layout inputs
+**/
+
+.container {
+  height: 100vh;
+  display: grid;
+  gap: 10px;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas:
+    "a a a a  a a a a  a a a a"
+    "b b b b  b b b b  b b c c";
+
+  & .box-1 {
+    grid-area: a;
+  }
+
+  & .box-2 {
+    grid-area: b;
+  }
+
+  & .box-3 {
+    grid-area: c;
+  }
+}
+
+/**
+*! Box class center display inputs with flexbox layout
+**/
+
+[class^="box-"] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid red;
+}
+
+/**
+*! Media Query
+**/
+
+@include query (mobile) {
+  .container {
+    grid-template-areas:
+      "a a a a  a a a a  a a a a"
+      "b b b b  b b b b  b b b b"
+      "c c c c  c c c c  c c c c";
+  }
+}
