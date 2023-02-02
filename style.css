@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/**
+*! SCSS variables and each loop
+**/
+
+/**
+*! Defualt body style inputs.
+**/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* body {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+}
+
+* li {
+  list-style: none;
+}
+
+* a {
+  text-decoration: none;
+}
+
+[class^=box-] {
+  display: grid;
+  border: 3px solid red;
+}
+
+/**
+*! Container inputs.
+**/
+.container {
+  height: 100vh;
+  display: grid;
+  gap: 20px;
+  grid-template-rows: auto 1fr auto;
+}
+
+/**
+*! Navigation bar and header inputs.
+**/
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.nav-items {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
