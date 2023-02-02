@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/**
+*! SCSS variables and each loop
+**/
+
 $bp : (
   mobile : 480px ,
   tablet : 786px,
@@ -13,9 +18,13 @@ $bp : (
   }
 }
 
+/**
+*! Defualt body style inputs.
+**/
+
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 
   body {
@@ -30,7 +39,6 @@ $bp : (
   a {
     text-decoration: none;
   }
-
 }
 
 [class^="box-"] {
@@ -39,6 +47,9 @@ $bp : (
   border: 3px solid red;
 }
 
+/**
+*! Container inputs.
+**/
 
 .container {
   height: 100vh;
@@ -46,6 +57,10 @@ $bp : (
   gap: 20px;
   grid-template-rows: auto 1fr auto;
 }
+
+/**
+*! Navigation bar and header inputs.
+**/
 
 .navbar {
   display: flex;
