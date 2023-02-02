@@ -1,0 +1,64 @@
+/**
+*! SCSS Variables
+**/
+
+/**
+*! SCSS Media Query Render
+**/
+
+/**
+*! HTML or Body default style
+**/
+* {
+  margin: 5px 5px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* body {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+}
+
+/**
+*! Nested parent and children Grid layout inputs
+**/
+.container {
+  height: 100vh;
+  display: grid;
+  gap: 10px;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "a a a a  a a a a  a a a a" "b b b b  b b b b  b b c c";
+}
+
+.container .box-1 {
+  grid-area: a;
+}
+
+.container .box-2 {
+  grid-area: b;
+}
+
+.container .box-3 {
+  grid-area: c;
+}
+
+/**
+*! Box class center display inputs with flexbox layout
+**/
+[class^=box-] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid red;
+}
+
+/**
+*! Media Query
+**/
+@media (max-width: 480px) {
+  .container {
+    grid-template-areas: "a a a a  a a a a  a a a a" "b b b b  b b b b  b b b b" "c c c c  c c c c  c c c c";
+  }
+}
