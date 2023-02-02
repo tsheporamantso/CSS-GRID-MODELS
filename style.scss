@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+/**
+*! SCSS media query variables and each loop
+**/
+
 $bp : (
   mobile : 480px,
   tablet : 786px,
@@ -14,6 +18,10 @@ $bp : (
   }
 }
 
+/**
+*! Default body styles.
+**/
+
 * {
   margin: 0;
   padding: 0;
@@ -25,11 +33,19 @@ $bp : (
   }
 }
 
+/**
+*! Children box class center alignment with Grid.
+**/
+
 [class^="box-"] {
   display: grid;
   place-items: center;
   border: 3px solid red;
 }
+
+/**
+*! Parent Grid layout
+**/
 
 .container {
   display: grid;
@@ -37,6 +53,10 @@ $bp : (
   height: 100vh;
   grid-template-columns: repeat(12, 1fr);
 }
+
+/**
+*! Children Grid layout
+**/
 
 .box-1 {
   grid-column: 1 / 5;
@@ -46,7 +66,9 @@ $bp : (
   grid-column: 5 / 13;
 }
 
-
+/**
+*! Media Queries.
+**/
 
 @include query(mobile) {
   .container {
