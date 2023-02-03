@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu:wght@300&display=swap");
+/**
+*! Media Query Variables
+**/
+/**
+*! Media Query Render
+**/
+/**
+*! Default Styles Nested with conatiner and child inputs 
+**/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+* body {
+  font-family: "Ubuntu", "Poppins", sans-serif;
+  font-size: 2.1875rem;
+}
+* body .container {
+  height: 100vh;
+  display: grid;
+  gap: 0.625rem;
+  grid-template-areas: "a a a a  a a a a  a a a a" "c c b b  b b b b  b b e e" "c c d d  d d d d  d d e e" "c c d d  d d d d  d d e e" "f f f f  f f f f  f f f f";
+}
+* body [class^=box-] {
+  display: grid;
+  place-items: center;
+  border: 0.1875rem solid red;
+}
+* body .box-1 {
+  grid-area: a;
+}
+* body .box-2 {
+  grid-area: b;
+}
+* body .box-3 {
+  grid-area: c;
+}
+* body .box-4 {
+  grid-area: d;
+}
+* body .box-5 {
+  grid-area: e;
+}
+* body .box-6 {
+  grid-area: f;
+}
+
+/**
+*! Media query for tablet device
+**/
+@media (max-width: 786px) {
+  .container {
+    grid-template-areas: "a a a a  a a a a  a a a a" "b b b b  b b b b  b b b b" "c c d d  d d d d  d d d d" "c c d d  d d d d  d d d d" "e e f f  f f f f  f f f f";
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    grid-template-areas: "a a a a  a a a a  a a a a" "b b b b  b b b b  b b b b" "d d d d  d d d d  d d d d" "d d d d  d d d d  d d d d" "c c c c  c c c c  c c c c " "e e e e  e e e e  e e e e" "f f f f  f f f f  f f f f";
+  }
+}/*# sourceMappingURL=style.css.map */
