@@ -64,12 +64,12 @@
 **/
 
 /**
-* ? Windows are not responsive? must debug.
-**/
+    * ? Windows are not responsive? must debug.
+    **/
 
 /**
-* * Error sorted the issue was with nesting!
-**/
+    * * Error sorted the issue was with nesting!
+    **/
 @media (max-width: 786px) {
   .container {
     grid-template-areas: "a a a a  a a a a  a a a a" "b b b b  b b b b  b b b b" "c c d d  d d d d  d d d d" "c c d d  d d d d  d d d d" "e e f f  f f f f  f f f f";
